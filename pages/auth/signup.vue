@@ -71,10 +71,10 @@
           class="d-flex-column align-items-center mx-auto"
         >
           <div v-show="step === 1" class="account-user">
-            <p class="text-center mb-1">
+            <p class="mb-1">
               Create your halo Account
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                 Get started on your path to making the most.<br />
                 of your money.
@@ -133,10 +133,10 @@
           </div>
 
           <div v-show="step === 2" class="account-user">
-            <p class="text-center mb-1">
+            <p class="mb-1">
               Tell us who you are
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                 We advise that you use the names available on your valid
                 documents and ID cards.
@@ -200,17 +200,17 @@
             </div>
           </div>
           <div v-show="step === 3" class="account-user">
-            <p class="text-center mb-1">
+            <p class="mb-1">
               Which of these do you have?
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                 Select a valid document or ID card to Verfiy your identity.
               </h6>
             </div>
             <div class="formGroup flex-grow-1 pl-0 pr-0">
               <div
-                class="flex-grow-1 p-5 pl-0 pr-0 container align-items-center justify-content-center id-button-div"
+                class="flex-grow-1 p-5 pl-0 pr-0 align-items-center justify-content-center id-button-div"
               >
                 <div class="mb-3">
                   <button
@@ -266,10 +266,10 @@
             </div>
           </div>
           <div v-show="step === 4" class="account-user">
-            <p class="text-center mb-1">
+            <p class="mb-1">
               Upload ID Documents
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                 Enter the unique ID number on your card. It is the number
                 highlighted in the card shown below.
@@ -278,7 +278,7 @@
             <div
               class="flex-grow-1 pl-0 pr-0 container align-items-center justify-content-center"
             >
-              <div class="p-5 mt-3">
+              <div class="p-5 mt-2">
                 <div>
                   <img
                     src="~assets/gfx/idcard.png"
@@ -317,27 +317,28 @@
             </div>
           </div>
           <div v-show="step === 5" class="account-user">
-            <p class="text-center mb-1">
+            <p class="mb-1">
               Upload ID Documents
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                 Take and upload a front and back photo of your ID card/Document.
                 Make sure the photo is well lit and clearly shows your name,
                 passport and ID number.
               </h6>
             </div>
-            <div class="formGroup flex-grow-1 pl-0 pr-0">
-              <div>
+            <div class="formGroup flex-grow-1 pl-0 pr-0 p-3">
+              <div class="mt-2">
                 <b-form-file
                   v-model="file"
                   :state="Boolean(file)"
-                  size="sm"
+                  placeholder="Select front photo"
+                  drop-placeholder="drop file..."
                 ></b-form-file>
                 <p>{{ file ? file.name : "" }}</p>
               </div>
-              <button class="btn btn-outline-secondary">
-                <i
+              <div>
+                <!-- <i
                   class="fas fa-cloud-upload-alt fa-lg ml-5 grey-text"
                   aria-hidden="true"
                 ></i
@@ -347,14 +348,21 @@
                   type="text"
                   style="border:none;"
                   placeholder="Upload your file ..."
-                />
-              </button>
+                /> -->
+                <b-form-file
+                  v-model="file"
+                  :state="Boolean(file)"
+                  placeholder="Select Back photo"
+                  drop-placeholder="drop file..."
+                ></b-form-file>
+                <p>{{ file ? file.name : "" }}</p>
+              </div>
               <footer>
                 <p>
                   <button
                     @click.prevent="next()"
                     type="submit"
-                    class="btn btn-block text-white mt-4 mx-auto create-account-button"
+                    class="btn btn-block text-white mt-4 mx-auto upload-button"
                   >
                     <span>Upload Documents</span>
                   </button>
@@ -378,10 +386,10 @@
             </div>
           </div>
           <div v-show="step === 6" class="account-user">
-            <p class="text-center mb-1">
+            <p class="mb-1">
               Upload a Selfie photo
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                 This will help us confirm your identity.<br />
                 Make sure this photo clearly shows your face.<br />Please do not
@@ -392,7 +400,7 @@
               <div class="container p-5">
                 <div class="row mb-3">
                   <div class="col-md-3">
-                    Cam
+                    
                   </div>
                   <div class="col-md-9">
                     <h6 class="text-center">
@@ -402,7 +410,7 @@
                 </div>
                 <div class="row">
                   <div class="col-md-3">
-                    Gal
+                    
                   </div>
                   <div class="col-md-9">
                     <h6 class="text-center">
@@ -420,10 +428,10 @@
             </div>
           </div>
           <div v-show="step === 7" class="account-user">
-            <p class="text-center mb-1">
+            <p class="mb-1">
               We are reviewing your documents.
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                 Check your mail to Verify your account
               </h6>
@@ -443,7 +451,7 @@
                     type="submit"
                     class="btn btn-block mt-4 mx-auto resend-verification-link"
                   >
-                    <span>Create your halo Account</span>
+                    <span>Resend Verification Link</span>
                   </button>
                 </p>
               </footer>
@@ -548,8 +556,13 @@ form {
   font-family: "Gilroy";
   height: 50px;
 }
-.resend-verification-link{
-  background: #E0F1FE;
+.resend-verification-link {
+  background: #e0f1fe;
+  font-family: "Gilroy";
+  height: 50px;
+}
+.upload-button {
+  background: #143285;
   font-family: "Gilroy";
   height: 50px;
 }

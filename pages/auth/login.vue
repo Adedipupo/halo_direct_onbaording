@@ -65,11 +65,11 @@
           novalidate
           class="d-flex-column align-items-center mx-auto"
         >
-          <div v-show="step === 1" class="account-user">
-            <p class="text-center mb-1">
+          <div class="account-user">
+            <p class="mb-1">
               Welcome back
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                Log-in and get back to making the most of your money.
               </h6>
@@ -114,11 +114,11 @@
               </h6>
             </div>
           </div>
-          <div v-show="step === 2" class="account-user">
-            <p class="text-center mb-1">
+          <div class="account-user">
+            <p class="mb-1">
               Welcome back
             </p>
-            <div class="text-center getStarted">
+            <div class="getStarted">
               <h6>
                Log-in and get back to making the most of your money.
               </h6>
@@ -159,7 +159,7 @@
               </h6>
               <h6 class="text-center pt-3">
                 Don't have an account?
-                <NuxtLink to="/auth/login">Learn how you can sign up</NuxtLink>
+                <NuxtLink to="/auth/signup">Learn how you can sign up</NuxtLink>
               </h6>
             </div>
           </div>

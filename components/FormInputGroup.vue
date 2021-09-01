@@ -116,7 +116,7 @@ export default {
         },
         formLabelClasses() {
             return {
-                'label--required': this.required === true
+                // 'label--required': this.required === true
             }
         }
     }
