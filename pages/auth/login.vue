@@ -37,12 +37,7 @@
           <div v-show="step === 1" class="centerImg">
             <img class="showImage" src="~assets/gfx/illustrations/fd.png" />
           </div>
-          <div
-            v-show="
-              step === 2
-            "
-            class="centerImg"
-          >
+          <div v-show="step === 2" class="centerImg">
             <img class="showImage" src="~assets/gfx/illustrations/fd2.png" />
           </div>
         </div>
@@ -65,22 +60,30 @@
           novalidate
           class="d-flex-column align-items-center mx-auto"
         >
-          <div class="account-user">
+          <div v-show="step === 1" class="account-user">
             <p class="mb-1">
               Welcome back
             </p>
             <div class="getStarted">
               <h6>
-               Log-in and get back to making the most of your money.
+                Log-in and get back to making the most of your money.
               </h6>
             </div>
-            <div class="formGroup flex-grow-1 pl-0 pr-0">
+            <div class="formGroup flex-grow-1 pl-0 pr-0" for="toggle_button">
               <FormInputGroup
                 type="text"
                 attribute="Email"
                 v-model="form.email"
                 placeholder="Email Address"
                 autocomplete="given-name"
+                required
+              ></FormInputGroup>
+              <FormInputGroup
+                type="text"
+                v-model="form.phone"
+                placeholder="+234"
+                autocomplete="phone"
+                attribute="Phone Number"
                 required
               ></FormInputGroup>
               <FormInputGroupPassword
@@ -103,7 +106,9 @@
                 </p>
               </footer>
               <h6 class="text-center pt-3">
-                <a href @click.prevent="next()">Login with phone number instead</a>
+                <a href @click.prevent
+                  >Login with phone number instead</a
+                >
               </h6>
               <h6 class="text-center pt-3 fw-lighter">
                 I forgot my password
@@ -114,7 +119,7 @@
               </h6>
             </div>
           </div>
-          <div class="account-user">
+          <!-- <div v-show="step === 2" class="account-user">
             <p class="mb-1">
               Welcome back
             </p>
@@ -162,8 +167,7 @@
                 <NuxtLink to="/auth/signup">Learn how you can sign up</NuxtLink>
               </h6>
             </div>
-          </div>
-
+          </div> -->
         </form>
         <div class="about">
           <div class="row aboutRow p-3 mt-3">
@@ -194,7 +198,7 @@ export default {
         email: null,
         phone: null,
         date: null
-      },
+      }
     };
   },
   methods: {
