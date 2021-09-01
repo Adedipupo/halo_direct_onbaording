@@ -38,7 +38,9 @@
             <img class="showImage" src="~assets/gfx/illustrations/fd.png" />
           </div>
           <div
-            v-show="step === 2 || step === 3 || step === 4 || step === 5"
+            v-show="
+              step === 2 || step === 3 || step === 4 || step === 5 || step === 6
+            "
             class="centerImg"
           >
             <img class="showImage" src="~assets/gfx/illustrations/fd2.png" />
@@ -392,6 +394,51 @@
                   </button>
                 </div>
               </div>
+            </form>
+          </div>
+        </div>
+        <div v-show="step === 6" class="account-user">
+          <p class="text-center mb-1">
+            Upload a Selfie photo
+          </p>
+          <div class="text-center getStarted">
+            <h6>
+              This will help us confirm your identity.<br />
+              Make sure this photo clearly shows your face.<br />Please do not
+              upload pictures of pictures or filtered images.
+            </h6>
+          </div>
+          <div class="formGroup flex-grow-1 pl-0 pr-0">
+            <form
+              @submit.prevent=""
+              novalidate
+              class="d-flex-column align-items-center mx-auto"
+            >
+              <div class="container p-5">
+                <div class="row">
+                  <div class="col">
+                    1 of 2
+                  </div>
+                  <div class="col">
+                    2 of 2
+                  </div>
+                </div>
+              </div>
+              <footer>
+                <p>
+                  <button
+                    @click.prevent="next()"
+                    type="submit"
+                    class="btn btn-block text-white mt-4 mx-auto create-account-button"
+                  >
+                    <span>Create your halo Account</span>
+                  </button>
+                </p>
+              </footer>
+              <h6 class="text-center pt-3">
+                Already have an Account?
+                <NuxtLink to="/auth/login">Sign in</NuxtLink>
+              </h6>
             </form>
           </div>
         </div>
