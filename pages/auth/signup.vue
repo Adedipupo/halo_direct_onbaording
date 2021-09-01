@@ -15,9 +15,9 @@
           </NuxtLink>
         </p>
         <div class="mt-5 mw-380 mx-auto flex-grow-1 earn-commission">
-          <h2 class="earn">
+          <h2 class="earn fw-light">
             <span style="font-weight:bold">Earn</span> the best commissons.<br />
-            Manage the <span style="font-weight:bold">best portfolio</span>
+            Manage the <span style="font-weight:bold">best portfolios</span>
           </h2>
 
           <div class="one">
@@ -440,7 +440,6 @@
               <footer>
                 <p>
                   <button
-                    @click.prevent="next()"
                     type="submit"
                     class="btn btn-block mt-4 mx-auto resend-verification-link"
                   >
