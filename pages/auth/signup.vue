@@ -39,7 +39,12 @@
           </div>
           <div
             v-show="
-              step === 2 || step === 3 || step === 4 || step === 5 || step === 6
+              step === 2 ||
+                step === 3 ||
+                step === 4 ||
+                step === 5 ||
+                step === 6 ||
+                step === 7
             "
             class="centerImg"
           >
@@ -60,22 +65,22 @@
             />
           </NuxtLink>
         </div>
-        <div v-show="step === 1" class="account-user">
-          <p class="text-center mb-1">
-            Create your halo Account
-          </p>
-          <div class="text-center getStarted">
-            <h6>
-              Get started on your path to making the most.<br />
-              of your money.
-            </h6>
-          </div>
-          <div class="formGroup flex-grow-1 pl-0 pr-0">
-            <form
-              @submit.prevent=""
-              novalidate
-              class="d-flex-column align-items-center mx-auto"
-            >
+        <form
+          @submit.prevent=""
+          novalidate
+          class="d-flex-column align-items-center mx-auto"
+        >
+          <div v-show="step === 1" class="account-user">
+            <p class="text-center mb-1">
+              Create your halo Account
+            </p>
+            <div class="text-center getStarted">
+              <h6>
+                Get started on your path to making the most.<br />
+                of your money.
+              </h6>
+            </div>
+            <div class="formGroup flex-grow-1 pl-0 pr-0">
               <FormInputGroup
                 type="text"
                 attribute="Email"
@@ -124,26 +129,20 @@
                 Already have an Account?
                 <NuxtLink to="/auth/login">Sign in</NuxtLink>
               </h6>
-            </form>
+            </div>
           </div>
-        </div>
 
-        <div v-show="step === 2" class="account-user">
-          <p class="text-center mb-1">
-            Tell us who you are
-          </p>
-          <div class="text-center getStarted">
-            <h6>
-              We advise that you use the names available on your valid documents
-              and ID cards.
-            </h6>
-          </div>
-          <div class="formGroup flex-grow-1 pl-0 pr-0">
-            <form
-              @submit.prevent=""
-              novalidate
-              class="d-flex-column align-items-center mx-auto"
-            >
+          <div v-show="step === 2" class="account-user">
+            <p class="text-center mb-1">
+              Tell us who you are
+            </p>
+            <div class="text-center getStarted">
+              <h6>
+                We advise that you use the names available on your valid
+                documents and ID cards.
+              </h6>
+            </div>
+            <div class="formGroup flex-grow-1 pl-0 pr-0">
               <FormInputGroup
                 type="text"
                 attribute="First Name"
@@ -198,24 +197,18 @@
                 By choosing to continue, you agree to our Terms of Service and
                 Privacy Policy.
               </h6>
-            </form>
+            </div>
           </div>
-        </div>
-        <div v-show="step === 3" class="account-user">
-          <p class="text-center mb-1">
-            Which of these do you have?
-          </p>
-          <div class="text-center getStarted">
-            <h6>
-              Select a valid document or ID card to Verfiy your identity.
-            </h6>
-          </div>
-          <div class="formGroup flex-grow-1 pl-0 pr-0">
-            <form
-              @submit.prevent=""
-              novalidate
-              class="d-flex-column align-items-center mx-auto"
-            >
+          <div v-show="step === 3" class="account-user">
+            <p class="text-center mb-1">
+              Which of these do you have?
+            </p>
+            <div class="text-center getStarted">
+              <h6>
+                Select a valid document or ID card to Verfiy your identity.
+              </h6>
+            </div>
+            <div class="formGroup flex-grow-1 pl-0 pr-0">
               <div
                 class="flex-grow-1 p-5 pl-0 pr-0 container align-items-center justify-content-center id-button-div"
               >
@@ -270,26 +263,20 @@
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
-        <div v-show="step === 4" class="account-user">
-          <p class="text-center mb-1">
-            Upload ID Documents
-          </p>
-          <div class="text-center getStarted">
-            <h6>
-              Enter the unique ID number on your card. It is the number
-              highlighted in the card shown below.
-            </h6>
-          </div>
-          <div
-            class="flex-grow-1 pl-0 pr-0 container align-items-center justify-content-center"
-          >
-            <form
-              @submit.prevent=""
-              novalidate
-              class="align-items-center mx-auto"
+          <div v-show="step === 4" class="account-user">
+            <p class="text-center mb-1">
+              Upload ID Documents
+            </p>
+            <div class="text-center getStarted">
+              <h6>
+                Enter the unique ID number on your card. It is the number
+                highlighted in the card shown below.
+              </h6>
+            </div>
+            <div
+              class="flex-grow-1 pl-0 pr-0 container align-items-center justify-content-center"
             >
               <div class="p-5 mt-3">
                 <div>
@@ -327,26 +314,20 @@
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
-        <div v-show="step === 5" class="account-user">
-          <p class="text-center mb-1">
-            Upload ID Documents
-          </p>
-          <div class="text-center getStarted">
-            <h6>
-              Take and upload a front and back photo of your ID card/Document.
-              Make sure the photo is well lit and clearly shows your name,
-              passport and ID number.
-            </h6>
-          </div>
-          <div class="formGroup flex-grow-1 pl-0 pr-0">
-            <form
-              @submit.prevent=""
-              novalidate
-              class="d-flex-column align-items-center mx-auto"
-            >
+          <div v-show="step === 5" class="account-user">
+            <p class="text-center mb-1">
+              Upload ID Documents
+            </p>
+            <div class="text-center getStarted">
+              <h6>
+                Take and upload a front and back photo of your ID card/Document.
+                Make sure the photo is well lit and clearly shows your name,
+                passport and ID number.
+              </h6>
+            </div>
+            <div class="formGroup flex-grow-1 pl-0 pr-0">
               <div>
                 <b-form-file
                   v-model="file"
@@ -394,26 +375,20 @@
                   </button>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
-        </div>
-        <div v-show="step === 6" class="account-user">
-          <p class="text-center mb-1">
-            Upload a Selfie photo
-          </p>
-          <div class="text-center getStarted">
-            <h6>
-              This will help us confirm your identity.<br />
-              Make sure this photo clearly shows your face.<br />Please do not
-              upload pictures of pictures or filtered images.
-            </h6>
-          </div>
-          <div class="formGroup flex-grow-1 pl-0 pr-0">
-            <form
-              @submit.prevent=""
-              novalidate
-              class="d-flex-column align-items-center mx-auto"
-            >
+          <div v-show="step === 6" class="account-user">
+            <p class="text-center mb-1">
+              Upload a Selfie photo
+            </p>
+            <div class="text-center getStarted">
+              <h6>
+                This will help us confirm your identity.<br />
+                Make sure this photo clearly shows your face.<br />Please do not
+                upload pictures of pictures or filtered images.
+              </h6>
+            </div>
+            <div class="formGroup flex-grow-1 pl-0 pr-0 p-4">
               <div class="container p-5">
                 <div class="row mb-3">
                   <div class="col-md-3">
@@ -437,15 +412,48 @@
                 </div>
               </div>
               <footer>
-                
+                <div class="container">
+                  <button @click.prevent="prev()">Prev</button>
+                  <button @click.prevent="next()">Next</button>
+                </div>
               </footer>
-              <h6 class="text-center pt-3">
-                Already have an Account?
-                <NuxtLink to="/auth/login">Sign in</NuxtLink>
-              </h6>
-            </form>
+            </div>
           </div>
-        </div>
+          <div v-show="step === 7" class="account-user">
+            <p class="text-center mb-1">
+              We are reviewing your documents.
+            </p>
+            <div class="text-center getStarted">
+              <h6>
+                Check your mail to Verify your account
+              </h6>
+            </div>
+            <div class="formGroup flex-grow-1 pl-0 pr-0">
+              <FormInputGroup
+                type="text"
+                attribute="Email"
+                v-model="form.email"
+                placeholder="Email Address"
+                autocomplete="given-name"
+                required
+              ></FormInputGroup>
+              <footer>
+                <p>
+                  <button
+                    @click.prevent="next()"
+                    type="submit"
+                    class="btn btn-block mt-4 mx-auto resend-verification-link"
+                  >
+                    <span>Create your halo Account</span>
+                  </button>
+                </p>
+              </footer>
+              <h6 class="pt-3">
+                Didn’t get our email? Request a new link.
+              </h6>
+            </div>
+          </div>
+        </form>
         <div class="about">
           <div class="row aboutRow p-3 mt-3">
             <div class="col-lg-8">
@@ -482,6 +490,9 @@ export default {
     };
   },
   methods: {
+    prev() {
+      this.step--;
+    },
     next() {
       this.step++;
     },
@@ -536,6 +547,12 @@ form {
 .create-account-button {
   background: #143285;
   font-family: "Gilroy";
+  height: 50px;
+}
+.resend-verification-link{
+  background: #E0F1FE;
+  font-family: "Gilroy";
+  height: 50px;
 }
 .about {
   font-family: "Nunito";
