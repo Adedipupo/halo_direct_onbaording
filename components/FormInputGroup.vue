@@ -1,5 +1,6 @@
 <template>
     <form-input-validate-wrapped :validator="v" :attribute='attribute'>
+        <label :class="formLabelClasses" v-html="label"></label>
         <input
             v-mask="`${mask}`"
             class="form-control"
@@ -28,7 +29,7 @@ export default {
     props: {
         v: {
             type: Object,
-            // required: true
+            required: true
         },
         mask: {
             type: String,
@@ -37,6 +38,10 @@ export default {
             default: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
         },
         attribute: {
+            type: String,
+            required: true
+        },
+        label: {
             type: String,
             required: true
         },
@@ -107,6 +112,11 @@ export default {
         formControlClasses() {
             return {
                 'is-invalid': this.hasError
+            }
+        },
+        formLabelClasses() {
+            return {
+                'label--required': this.required === true
             }
         }
     }
