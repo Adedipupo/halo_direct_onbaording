@@ -415,25 +415,29 @@
               class="d-flex-column align-items-center mx-auto"
             >
               <div class="container p-5">
-                <div class="row">
-                  <div class="col">
-                    1 of 2
+                <div class="row mb-3">
+                  <div class="col-md-3">
+                    Cam
                   </div>
-                  <div class="col">
-                    2 of 2
+                  <div class="col-md-9">
+                    <h6 class="text-center">
+                      Take Photo
+                    </h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-3">
+                    Gal
+                  </div>
+                  <div class="col-md-9">
+                    <h6 class="text-center">
+                      Choose from library
+                    </h6>
                   </div>
                 </div>
               </div>
               <footer>
-                <p>
-                  <button
-                    @click.prevent="next()"
-                    type="submit"
-                    class="btn btn-block text-white mt-4 mx-auto create-account-button"
-                  >
-                    <span>Create your halo Account</span>
-                  </button>
-                </p>
+                
               </footer>
               <h6 class="text-center pt-3">
                 Already have an Account?
