@@ -1,12 +1,1 @@
-<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="120" height="120" fill="white"/>
-<circle cx="76.4587" cy="71.6721" r="11.3279" stroke="#E58A6D" stroke-width="2"/>
-<circle cx="57.9676" cy="52.41" r="9.01639" stroke="#E58A6D" stroke-width="2"/>
-<circle cx="39.8608" cy="53.5659" r="1.69672" stroke="#E58A6D" stroke-width="2"/>
-<circle cx="76.0717" cy="53.5659" r="1.69672" stroke="#E58A6D" stroke-width="2"/>
-<path d="M76.8457 38.1558C77.3594 40.082 79.4654 44.1656 83.7801 45.0902" stroke="#E58A6D" stroke-width="2"/>
-<path d="M38.7031 37.7705C38.1895 39.6967 36.0835 43.7803 31.7687 44.7049" stroke="#E58A6D" stroke-width="2"/>
-<path d="M38.7031 67.8198C38.1895 65.8936 36.0835 61.81 31.7687 60.8854" stroke="#E58A6D" stroke-width="2"/>
-<path d="M72.6055 74.7542L77.2284 71.287V64.7378" stroke="#E58A6D" stroke-width="2"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M33 39H82.9344V61.18C83.6536 61.6248 84.3236 62.1415 84.9344 62.72V39V37H82.9344H33H31V39V66.5902V68.5902H33H64.5192C64.6974 67.8981 64.9341 67.2296 65.2237 66.5902H33V39Z" fill="#E58A6D"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="none" viewBox="0 0 120 120"><rect width="120" height="120" fill="#fff"/><circle cx="76.459" cy="71.672" r="11.328" stroke="#E58A6D" stroke-width="2"/><circle cx="57.968" cy="52.41" r="9.016" stroke="#E58A6D" stroke-width="2"/><circle cx="39.861" cy="53.566" r="1.697" stroke="#E58A6D" stroke-width="2"/><circle cx="76.072" cy="53.566" r="1.697" stroke="#E58A6D" stroke-width="2"/><path stroke="#E58A6D" stroke-width="2" d="M76.8457 38.1558C77.3594 40.082 79.4654 44.1656 83.7801 45.0902"/><path stroke="#E58A6D" stroke-width="2" d="M38.7031 37.7705C38.1895 39.6967 36.0835 43.7803 31.7687 44.7049"/><path stroke="#E58A6D" stroke-width="2" d="M38.7031 67.8198C38.1895 65.8936 36.0835 61.81 31.7687 60.8854"/><path stroke="#E58A6D" stroke-width="2" d="M72.6055 74.7542L77.2284 71.287V64.7378"/><path fill="#E58A6D" fill-rule="evenodd" d="M33 39H82.9344V61.18C83.6536 61.6248 84.3236 62.1415 84.9344 62.72V39V37H82.9344H33H31V39V66.5902V68.5902H33H64.5192C64.6974 67.8981 64.9341 67.2296 65.2237 66.5902H33V39Z" clip-rule="evenodd"/></svg>
